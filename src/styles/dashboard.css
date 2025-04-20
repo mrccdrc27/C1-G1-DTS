@@ -1,0 +1,332 @@
+/* styles/dashboard.css */
+
+.hero-banner {
+  background-image: url('../assets/images/dts.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 120px;
+  position: relative;
+  color: #fcfcfc;
+  display: flex;
+  align-items: end;
+  padding: 0 20px;
+}
+
+.hero-banner::before {
+  content: '';                                       /* Required for pseudo-elements */
+  position: absolute;                                /* Position it absolutely within the parent */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(120, 0, 0, 0.5);            /* Apply your semi-transparent background */
+  z-index: 0; 
+  backdrop-filter: blur(10px);                                       /* Ensure it's behind the content */
+}
+
+
+.hero-content {
+  position: relative;  /* Content should be on top of the overlay */
+  z-index: 1; /* Make sure the text is above the overlay */
+}
+
+.hero-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  /* grid-template-rows: repeat(5, 1fr); */
+  grid-template-rows: auto;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.div1 {
+  grid-column: span 3 / span 3;
+  grid-row: span 2 / span 2;
+}
+
+.div2 {
+  grid-column: span 3 / span 3;
+  grid-row: span 3 / span 3;
+  grid-row-start: 3;
+}
+
+.div3 {
+  grid-column: span 2 / span 2;
+  grid-row: span 5 / span 5;
+  grid-column-start: 4;
+}
+
+.container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dashboard-title {
+  font-size: 18px;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  color: #242424;
+  border-bottom: 1px solid #ddd; 
+}
+      
+.stats-container {
+  display: flex;
+  padding-right: 10px;
+  gap: 15px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.stat-card {
+  background-color: #fcfcfc;
+  border-radius: 5px;
+  padding: 15px;
+  min-width: 120px;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  flex: 1;
+}
+
+.stat-number {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: #242424;
+}
+
+.stat-underline {
+  height: 3px;
+  width: 50%;
+  margin: 10px auto;
+}
+
+.open-underline {
+  background-color: #175CD3;
+}
+
+.hold-underline {
+  background-color: #FDB022;
+}
+
+.approved-underline {
+  background-color: #0C8F54;
+}
+
+.rejected-underline {
+  background-color: #D92D20;
+}
+
+.dashboard-layout {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tickets-section {
+  flex: 2;
+  padding-right: 10px;
+}
+
+.updates-section {
+  margin-top: 20px;
+  flex: 1;
+}
+
+.table-tickets {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.table-tickets tr {
+  border-bottom: 1px solid #eee;
+} 
+
+.table-tickets td {
+  padding: 12px 15px;
+  text-align: left;
+  font-size: 13px;
+}
+
+.avatar {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: burlywood;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.due-date {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  gap: 10px;
+  align-items: center;
+}
+
+.page-button {
+  padding: 5px 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+.page-number {
+  width: 30px;
+  height: 30px;
+  background-color: #3498db;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-count {
+  color: #777;
+  font-size: 14px;
+}
+
+.updates-card {
+  background-color: #e1f5fe;
+  border-radius: 5px;
+  padding: 15px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  height: 100%;
+}
+
+.update-item {
+  padding: 15px 0;
+  border-bottom: 1px solid #b3e5fc;
+  display: flex;
+  justify-content: space-between;
+}
+
+.update-item:last-child {
+  border-bottom: none;
+}
+
+.update-date {
+  color: #777;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.update-title {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.update-id {
+  color: #777;
+  font-size: 12px;
+}
+
+.status-indicator {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  align-self: center;
+}
+
+.status-pending {
+  background-color: #f39c12;
+}
+
+.status-open {
+  background-color: #3498db;
+}
+
+.status-approved {
+  background-color: #2ecc71;
+}
+
+.status-deny {
+  background-color: #e74c3c;
+}
+
+/* Responsive styles for smaller screens */
+
+/* For screens smaller than 1200px */
+@media (max-width: 1200px) {
+  .parent {
+    grid-template-columns: repeat(4, 1fr); /* Adjust to 4 columns */
+  }
+
+  .div1 {
+    grid-column: span 2; /* Use 2 columns for div1 */
+  }
+
+  .div2 {
+    grid-column: span 2; /* Use 2 columns for div2 */
+  }
+
+  .div3 {
+    grid-column: span 2; /* Use 2 columns for div3 */
+  }
+}
+
+/* For screens smaller than 900px */
+@media (max-width: 900px) {
+  .parent {
+    grid-template-columns: repeat(2, 1fr); /* Adjust to 2 columns */
+  }
+
+  .div1, .div2, .div3 {
+    grid-column: span 2; /* Each div should span full width */
+  }
+
+  .stats-container {
+    flex-direction: column; /* Stack stat cards vertically */
+  }
+
+  .stat-card {
+    min-width: 100%; /* Allow stat cards to stretch full width */
+  }
+}
+
+/* For screens smaller than 600px */
+@media (max-width: 600px) {
+  .hero-banner {
+    height: 80px; /* Adjust hero banner height */
+  }
+
+  .hero-title {
+    font-size: 18px; /* Reduce font size */
+  }
+
+  .dashboard-title {
+    font-size: 16px; /* Reduce dashboard title font size */
+  }
+
+  .page-number {
+    width: 25px;
+    height: 25px;
+  }
+
+  .table-tickets td {
+    font-size: 12px; /* Smaller font for table */
+  }
+}

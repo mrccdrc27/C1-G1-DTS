@@ -1,0 +1,85 @@
+.archive-page {
+  margin: 0 12vw;
+}
+
+.archive-title h3{
+  font-size: 35px; /*it should be rem or em*/
+  color: #353d48;
+  border-bottom: 1px solid #ddd; 
+  margin-bottom: 20px;
+  padding-top: 15px;
+  /* padding: 20px; */
+}
+
+.archive-search {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.archive-search-cont {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.archive-search-cont input[type="text"] {
+  width: 300px;
+  padding: 5px 10px; 
+  font-size: 13px;
+  border-radius: 8px 2px 2px 8px;
+  border: 1px solid #ccc;  
+}
+
+.archive-search-cont .archive-search-button {
+  background-color: #3498DB;
+  color: #ffff;
+  padding: 5px 20px;
+  width: 100px;
+  border-radius: 2px 8px 8px 2px;
+  border: none;   
+  cursor: pointer;
+}
+
+.archive-category {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.archive-date {
+  display: flex;
+  flex-wrap: wrap;             
+  gap: 10px;
+}
+
+.archive-date input[type="date"] {
+  padding: 5px 10px; 
+  font-size: 13;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  color: var(--text-color);
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.archive-date .archive-date-button{
+  background-color: #3498DB;
+  color: #ffff;
+  padding: 5px 20px;
+  width: 100px;
+  border-radius: 8px;
+  border: none;   
+  cursor: pointer;
+}
+
+/* FOR TABLE DESIGN, IT USES THE DESIGN FROM ticket.css  */
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .archive-page {
+    margin: 0 5vw;  /* Less margin on smaller screens */
+  }
+}

@@ -1,0 +1,107 @@
+.track-page {
+  margin: 0 12vw;
+}
+
+.track-title h3{
+  font-size: 35px; /*it should be rem or em*/
+  color: #353d48;
+  border-bottom: 1px solid #ddd; 
+  margin-bottom: 20px;
+  padding-top: 15px;
+  /* padding: 20px; */
+}
+
+.tp-search-cont {
+  display: flex;
+  justify-content: space-between;
+  /* background-color: yellow; */
+  padding: 20px;
+}
+
+.tp-search-cont input[type="text"]{
+  flex: 2;
+  padding: 5px 10px; 
+  font-size: 13px;
+  border-radius: 8px 2px 2px 8px;
+  border: 1px solid #ccc;  
+  width: 100%;
+}
+
+.tp-search-cont button{
+  flex: 0.5;
+  background-color: #3498DB;
+  color: #ffff;
+  padding: 5px 20px;
+  border-radius: 2px 8px 8px 2px;
+  border: none;   
+  cursor: pointer;
+}
+
+.tp-track-cont {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f9f9f9;
+  /* background-color: orange; */
+  padding: 20px;
+  border:  1px solid #ddd;
+  border-radius: 8px 8px 0 0;
+}
+
+.tp-track-stat-cont {
+  display: flex;
+  gap: 10px;
+}
+
+.tp-track-details-cont {
+  /* background-color: blue; */
+  padding: 20px;
+  border:  1px solid #ddd;
+  border-radius: 0 0 8px 8px; 
+}
+
+.tp-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tp-item p{
+  font-size: 13px;
+}
+/* .bot-track{
+  background-color: aqua;
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+
+.bot-track1 {
+  flex-grow: 1;
+  flex-basis: 200px;
+  background-color: blue;
+  height: 100px;
+  flex-shrink: 1; 
+}
+
+.bot-track2 {
+  flex-grow: 1;
+  flex-basis: 200px;
+  background-color: red;
+  height: 100px;
+  flex-shrink: 1; 
+}
+
+.bot-track3 {
+  flex-grow: 1;
+  flex-basis: 200px;
+  background-color: green;
+  height: 100px;
+  flex-shrink: 1; 
+} */
+
+/* add media query here */
+@media (max-width: 768px) {
+  .track-page {
+    margin: 0 5vw;  /* Less margin on smaller screens */
+  }
+}
