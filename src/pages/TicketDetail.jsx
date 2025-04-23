@@ -13,7 +13,7 @@ function TicketDetail() {
 
   useEffect(() => {
     const fetchticket= async () => {
-      const response= await fetch(`http://localhost:5000/tickets?ticket_id=${id}`)
+      const response= await fetch(`http://localhost:3000/tickets?ticket_id=${id}`)
       const data = await response.json()
       setTicket(data[0]);
     };

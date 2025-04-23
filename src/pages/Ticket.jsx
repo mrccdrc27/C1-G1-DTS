@@ -23,7 +23,7 @@ function Ticket() {
   useEffect(() => {
     const fetchTickets = async () => {
       try {
-        const response = await fetch('http://localhost:5000/tickets');
+        const response = await fetch('http://localhost:3000/tickets');
         if (!response.ok) {
           throw new Error('Failed to fetch tickets');
         }

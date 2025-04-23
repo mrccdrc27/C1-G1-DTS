@@ -7,6 +7,12 @@ import Track from '../pages/Track';
 import Archive from '../pages/Archive';
 import TicketDetail from '../pages/TicketDetail';
 
+// admin exports
+import AdminDashboard from '../admin/Dashboard';
+import Agents from '../admin/Agents';
+import Workflow from '../admin/Workflow';
+import AdminArchive from '../admin/Archive';
+
 
 // Optional for auth
 // import ProtectedRoute from './routes/ProtectedRoute';
@@ -17,8 +23,15 @@ const routes = [
   {path: '/ticket', element: <Ticket />,},
   {path: '/track', element: <Track />,},
   {path: '/archive', element: <Archive />,},
-
   {path: '/ticket/:id', element: <TicketDetail />,},
+
+  
+  // Admin
+  {path: '/admin', element: <AdminDashboard/>,},
+  {path: '/admin/agents', element: <Agents/>,},
+  {path: '/admin/workflow', element: <Workflow/>,},
+  {path: '/admin/archive', element: <AdminArchive/>,},
+
 ]
 
 const router = createBrowserRouter(routes);
